@@ -12,20 +12,6 @@
     <div class="monitor">
       <div class="level-display" id="level-display">Level:1</div>
       <div class="plant-display">
-        <img src="plant.webp" alt=<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plant Monitor</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Shrubbert</h1>
-    <div class="monitor">
-      <div class="level-display" id="level-display">Level:1</div>
-      <div class="plant-display">
         <img src="plant.webp" alt="Cute pixelated plant" class="plant-sprite">
         <div class="moisture-container">
           <div class="moisture-bar" id="moisture-bar"></div>
@@ -33,73 +19,12 @@
         <div class="moisture-text">Moisture: <span id="moisture">75%</span></div>
       </div>
       <div class="plant-info">
-        <p><strong>Plant Type:</strong><br>Cactus</p>
-        <p><strong>Latin Name:</strong><br><em>Opuntia ficus-indica</em></p>
-        <p><strong>Origin:</strong><br>Central America</p>
-        <p><strong>Given Name:</strong><br>Shrubbert</p>
-        <p><strong>Sunlight Needs:</strong><br>Bright, direct sunlight</p>
-        <p><strong>Watering Frequency:</strong><br>Once every 2 weeks</p>
-      </div>
-      <button id="water-button" onclick="waterPlant()">Water Shrubbert</button>
-    </div>
-  </div>
-
-  <script>
-    let level = 1; // Initialize level
-  
-    // Function to update the level display
-    function updateLevelDisplay() {
-      // Set the initial date from which the level is calculated
-      const startDate = new Date("2024-11-03"); // Adjust this date as needed
-      const today = new Date();
-  
-      // Calculate the difference in time and convert it to days
-      const timeDifference = today.getTime() - startDate.getTime();
-      const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-  
-      // Level increases by 1 for each day that has passed
-      level = daysDifference + 1;
-  
-      // Display the level
-      document.getElementById("level-display").textContent = `Level:${level}`;
-    }
-  
-    // Call the updateLevelDisplay function when the page loads
-    window.onload = function() {
-      updateLevelDisplay();
-    };
-  
-    function waterPlant() {
-      const moistureBar = document.getElementById('moisture-bar');
-      const moistureDisplay = document.getElementById('moisture');
-  
-      moistureBar.style.width = '100%';
-      moistureDisplay.textContent = '100%';
-      document.getElementById('water-button').textContent = 'Watered!';
-  
-      setTimeout(() => {
-        document.getElementById('water-button').textContent = 'Water Shrubbert';
-        moistureBar.style.width = '75%';
-        moistureDisplay.textContent = '75%';
-      }, 2000);
-    }
-  </script>
-  
-</body>
-</html>
-"Cute pixelated plant" class="plant-sprite">
-        <div class="moisture-container">
-          <div class="moisture-bar" id="moisture-bar"></div>
-        </div>
-        <div class="moisture-text">Moisture: <span id="moisture">75%</span></div>
-      </div>
-      <div class="plant-info">
-        <p><strong>Plant Type:</strong><br>Cactus</p>
-        <p><strong>Latin Name:</strong><br><em>Opuntia ficus-indica</em></p>
-        <p><strong>Origin:</strong><br>Central America</p>
-        <p><strong>Given Name:</strong><br>Shrubbert</p>
-        <p><strong>Sunlight Needs:</strong><br>Bright, direct sunlight</p>
-        <p><strong>Watering Frequency:</strong><br>Once every 2 weeks</p>
+        <p><strong>Plant Type:</strong> Cactus</p>
+        <p><strong>Latin Name:</strong> <em>Opuntia ficus-indica</em></p>
+        <p><strong>Origin:</strong> Central America</p>
+        <p><strong>Given Name:</strong> Shrubbert</p>
+        <p><strong>Sunlight Needs:</strong> Bright, direct sunlight</p>
+        <p><strong>Watering Frequency:</strong> Once every 2 weeks</p>
       </div>
       <button id="water-button" onclick="waterPlant()">Water Shrubbert</button>
     </div>
